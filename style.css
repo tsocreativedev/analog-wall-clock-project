@@ -1,0 +1,88 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: "Poppins";
+}
+
+h1 {
+    padding-top: 20px;
+    text-align: center;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.clock {
+    width: 300px;
+    height: 300px;
+    border: 10px solid black;
+    border-radius: 50%;
+    background-image: url(./image/bg-image.jpg);
+    background-position: center;
+    background-size: cover;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.number {
+    transform: rotate(calc(30deg * var(--n)));
+    position: absolute;
+    text-align: center;
+    inset: 20px;
+}
+
+.number b  {
+    transform: rotate(calc(-30deg * var(--n)));
+    display: inline-block;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.centerDot {
+    width: 14px;
+    height: 14px;
+    background-color: white;
+    border: 3px solid black;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 100;
+}
+
+.second-hand {
+    width: 4px;
+    height: 120px;
+    background-color: #ba0000;
+    border-radius: 5px;
+    position: absolute;
+    top: 43px;
+    transform-origin: bottom;
+}
+
+.minute-hand {
+    width: 5px;
+    height: 100px;
+    background-color: #0000c4;
+    border-radius: 5px;
+    position: absolute;
+    top: 63px;
+    transform-origin: bottom;
+}
+
+.hour-hand {
+    width: 6px;
+    height: 80px;
+    background-color: black;
+    border-radius: 5px;
+    position: absolute;
+    top: 83px;
+    transform-origin: bottom;
+}
